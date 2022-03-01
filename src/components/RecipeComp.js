@@ -1,9 +1,11 @@
 import { Card, Col } from "react-bootstrap";
+import imge from "../download.jpg";
+
 export default function RecipeComp() {
   return (
     <Col>
       <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Img variant="top" src={imge} />
         <Card.Body>
           <Card.Title>Card title</Card.Title>
           <Card.Text>
