@@ -1,2 +1,2 @@
-# redux4-react-recpie-v2
+# recipe-react-v2
 Created with CodeSandbox
