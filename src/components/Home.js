@@ -1,22 +1,31 @@
 import RecipeComp from "./RecipeComp";
 import { Row } from "react-bootstrap";
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Home() {
+  const dispatch = useDispatch();
+
+  const { recipes } = useSelector((state) => state.recipes);
+
   const getRecipes = async () => {
     const res = await fetch(
-      "www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast"
+      `https://www.themealdb.com/api/json/v1/1/filter.php?i=eggs`
     );
     const data = await res.json();
-    console.log(data);
+    dispatch({
+      type: "GET_RECIPES",
+      payload: data.meals
+    });
   };
   useEffect(() => {
     getRecipes();
   }, []);
+
   return (
     <Row xs={1} md={2} lg={3} xl={4} className="g-4">
-      {Array.from({ length: 8 }).map((_, idx) => (
-        <RecipeComp key={idx} id={idx} />
+      {recipes?.map((meal) => (
+        <RecipeComp key={meal.mealId} id={meal.mealId} />
       ))}
     </Row>
   );
