@@ -2,7 +2,7 @@ import { Card, Col } from "react-bootstrap";
 import { useState } from "react";
 
 import RecipeDetails from "./RecipeDetails";
-import imge from "../download.jpg";
+// import imge from "../download.jpg";
 
 export default function RecipeComp(props) {
   const [modalShow, setModalShow] = useState(false);
@@ -15,13 +15,10 @@ export default function RecipeComp(props) {
         id={props.id}
       />
       <Card onClick={() => setModalShow(true)}>
-        <Card.Img variant="top" src={imge} />
+        <Card.Img variant="top" src={props.meal.strMealThumb} />
         <Card.Body>
-          <Card.Title>Card title {props.id}</Card.Title>
-          <Card.Text>
-            This is a longer card with supporting text below as a natural
-            lead-in to additional content. This content is a little bit longer.
-          </Card.Text>
+          <Card.Title>{props.meal.strMeal}</Card.Title>
+          <Card.Text>View The Recipe</Card.Text>
         </Card.Body>
       </Card>
     </Col>
