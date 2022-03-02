@@ -22,10 +22,11 @@ export default function Home() {
     getRecipes();
   }, []);
 
+  console.log(recipes);
   return (
     <Row xs={1} md={2} lg={3} xl={4} className="g-4">
       {recipes?.map((meal) => (
-        <RecipeComp key={meal.mealId} id={meal.mealId} />
+        <RecipeComp key={meal.idMeal} id={meal.idMeal} />
       ))}
     </Row>
   );

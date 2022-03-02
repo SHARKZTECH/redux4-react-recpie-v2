@@ -2,7 +2,7 @@ import { Navbar, Container, FormControl, Form, Button } from "react-bootstrap";
 
 export default function Header() {
   return (
-    <Navbar bg="dark" variant="dark" className="mb-4">
+    <Navbar bg="dark" variant="dark" className="mb-4" sticky="top">
       <Container>
         <Navbar.Brand href="#home">
           <img
