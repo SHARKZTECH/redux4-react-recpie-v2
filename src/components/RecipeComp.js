@@ -1,11 +1,18 @@
 import { Card, Col } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 import RecipeDetails from "./RecipeDetails";
 // import imge from "../download.jpg";
+import { getDetails } from "../redux/actions";
 
 export default function RecipeComp(props) {
+  const dispatch = useDispatch();
   const [modalShow, setModalShow] = useState(false);
+
+  useEffect(() => {
+    dispatch(getDetails(props.id));
+  }, [props.id, dispatch]);
 
   return (
     <Col>

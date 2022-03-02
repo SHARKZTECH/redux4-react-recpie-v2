@@ -10,3 +10,14 @@ export const recipeReducer = (state = initState, { type, payload }) => {
       return state;
   }
 };
+
+export const recipeDetailsReducer=(state={},{type,payload})=>{
+  switch(type){
+    case "REQUEST_DETAILS":
+      return {loading:true}
+    case "SET_DETAILS":
+      return {...state,payload,loading:false}
+    default:
+      return state
+  }
+}
