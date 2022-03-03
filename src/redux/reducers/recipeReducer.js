@@ -11,12 +11,12 @@ export const recipeReducer = (state = initState, { type, payload }) => {
   }
 };
 
-export const recipeDetailsReducer=(state={},{type,payload})=>{
+export const recipeDetailsReducer=(state={meal:{}},{type,payload})=>{
   switch(type){
     case "REQUEST_DETAILS":
       return {loading:true}
     case "SET_DETAILS":
-      return {...state,payload,loading:false}
+      return {...state,meal:payload,loading:false}
     default:
       return state
   }

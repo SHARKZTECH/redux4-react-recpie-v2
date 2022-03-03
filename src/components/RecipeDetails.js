@@ -1,6 +1,15 @@
 import { Modal, Button } from "react-bootstrap";
+import {useSelector,useDispatch} from "react-redux"
 
-export default function RecipeDetails(props) {
+export default function RecipeDetails(props) {  
+
+    if(props.show){
+      const {meal}=useSelector(state=>state.details)
+      if(meal!==undefined){
+       console.log(meal.meals[0])
+      }      
+    }
+
   return (
     <Modal
       {...props}
@@ -10,7 +19,7 @@ export default function RecipeDetails(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading {props.id}
+          {props.id}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>

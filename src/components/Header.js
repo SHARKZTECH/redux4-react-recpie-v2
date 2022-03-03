@@ -23,7 +23,6 @@ export default function Header() {
     getRecipes();
   }, [search]);
 
-  console.log(search);
   return (
     <Navbar bg="dark" variant="dark" className="mb-4" sticky="top">
       <Container>
