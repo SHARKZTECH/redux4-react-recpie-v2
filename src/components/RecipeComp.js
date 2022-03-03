@@ -1,6 +1,6 @@
 import { Card, Col } from "react-bootstrap";
-import { useState, useEffect } from "react";
-import {useSelector,useDispatch} from "react-redux"
+import { useState} from "react";
+import {useDispatch} from "react-redux"
 
 
 import RecipeDetails from "./RecipeDetails";
