@@ -1,4 +1,4 @@
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button,Image } from "react-bootstrap";
 import {useSelector} from "react-redux"
 
 export default function RecipeDetails(props) {  
@@ -7,6 +7,7 @@ export default function RecipeDetails(props) {
       const {meal}=useSelector(state=>state.details)
       if(meal!==undefined){
        const m=(meal.meals[0])
+       console.log(m)
        return(
           <Modal
       {...props}
@@ -16,18 +17,26 @@ export default function RecipeDetails(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-         {m.idMeal} {props.id}
+         {m.strMeal}
+          {/* {props.id} */}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
+        <h4 className="text-center text-success">{m.strCategory}</h4>
+        <h4 className="text-center text-success">INSTRUCTION:</h4>
         <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
+          {m.strInstructions}
         </p>
+        <span className="d-flex justify-content-center m-3">
+        <Image  
+         src={m.strMealThumb} roundedCircle width={100} fluid />
+        </span>
+        
+        <a href={m.strYoutube} className="d-flex justify-content-center">
+              <Button >YOUTUBE</Button>
+        </a>
       </Modal.Body>
-      <Modal.Footer>
+      <Modal.Footer>       
         <Button onClick={props.onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
