@@ -9,14 +9,12 @@ export default function RecipeDetails(props) {
        const m=(meal.meals[0])
        console.log(m)
        return(
-          <Modal
-
+       <Modal
       {...props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
-      scrollable={true}
-    >
+      scrollable={true}>
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
          {m.strMeal}
