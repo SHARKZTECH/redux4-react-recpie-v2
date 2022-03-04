@@ -10,10 +10,12 @@ export default function RecipeDetails(props) {
        console.log(m)
        return(
           <Modal
+
       {...props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
+      scrollable={true}
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
