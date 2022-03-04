@@ -1,17 +1,14 @@
 import { Modal, Button } from "react-bootstrap";
-import {useSelector,useDispatch} from "react-redux"
+import {useSelector} from "react-redux"
 
 export default function RecipeDetails(props) {  
 
     if(props.show){
       const {meal}=useSelector(state=>state.details)
       if(meal!==undefined){
-       console.log(meal.meals[0])
-      }      
-    }
-
-  return (
-    <Modal
+       const m=(meal.meals[0])
+       return(
+          <Modal
       {...props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
@@ -19,7 +16,7 @@ export default function RecipeDetails(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          {props.id}
+         {m.idMeal} {props.id}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
@@ -34,5 +31,12 @@ export default function RecipeDetails(props) {
         <Button onClick={props.onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
+       )
+      }      
+    }
+
+  return (
+    <>
+    </>
   );
 }
