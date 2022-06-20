@@ -3,8 +3,8 @@ import {useSelector} from "react-redux"
 
 export default function RecipeDetails(props) {  
 
+  const {meal}=useSelector(state=>state.details)
     if(props.show){
-      const {meal}=useSelector(state=>state.details)
       if(meal!==undefined){
        const m=(meal.meals[0])
        console.log(m)
