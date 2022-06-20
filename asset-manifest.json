@@ -1,20 +1,13 @@
 {
   "files": {
-    "main.css": "/redux4-react-recpie-v2/static/css/main.92329ff6.chunk.css",
-    "main.js": "/redux4-react-recpie-v2/static/js/main.bd8cffdb.chunk.js",
-    "main.js.map": "/redux4-react-recpie-v2/static/js/main.bd8cffdb.chunk.js.map",
-    "runtime-main.js": "/redux4-react-recpie-v2/static/js/runtime-main.33ec4f84.js",
-    "runtime-main.js.map": "/redux4-react-recpie-v2/static/js/runtime-main.33ec4f84.js.map",
-    "static/js/2.3fc6f251.chunk.js": "/redux4-react-recpie-v2/static/js/2.3fc6f251.chunk.js",
-    "static/js/2.3fc6f251.chunk.js.map": "/redux4-react-recpie-v2/static/js/2.3fc6f251.chunk.js.map",
-    "index.html": "/redux4-react-recpie-v2/index.html",
-    "static/css/main.92329ff6.chunk.css.map": "/redux4-react-recpie-v2/static/css/main.92329ff6.chunk.css.map",
-    "static/js/2.3fc6f251.chunk.js.LICENSE.txt": "/redux4-react-recpie-v2/static/js/2.3fc6f251.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.7f05911e.css",
+    "main.js": "/static/js/main.368d39a6.js",
+    "index.html": "/index.html",
+    "main.7f05911e.css.map": "/static/css/main.7f05911e.css.map",
+    "main.368d39a6.js.map": "/static/js/main.368d39a6.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.33ec4f84.js",
-    "static/js/2.3fc6f251.chunk.js",
-    "static/css/main.92329ff6.chunk.css",
-    "static/js/main.bd8cffdb.chunk.js"
+    "static/css/main.7f05911e.css",
+    "static/js/main.368d39a6.js"
   ]
 }
