@@ -11,7 +11,7 @@ export default function App() {
       <Header />
       <Container>
         <Routes>
-          <Route path="/" exact element={<Home />} />
+          <Route path="/redux4-react-recpie-v2" exact element={<Home />} />
         </Routes>
       </Container>
     </Router>

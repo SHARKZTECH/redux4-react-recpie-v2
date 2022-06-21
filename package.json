@@ -1,5 +1,6 @@
 {
   "name": "3",
+  "homepage": "https://sharkztech.github.io/redux4-react-recpie-v2/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -43,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "github-pages": "^3.0.2"
   }
 }

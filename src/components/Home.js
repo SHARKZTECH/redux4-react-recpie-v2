@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 export default function Home() {
   const { recipes } = useSelector((state) => state.recipes);
+  console.log(recipes);
 
    return (
      <>
